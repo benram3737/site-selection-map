@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Benjamin Ramirez | Portfolio</title>
+<meta name="description" content="Underwriting, financial modeling and GIS work samples by Benjamin Ramirez, Atlanta, GA.">
+<style>
+  :root { --navy:#1f3352; --ink:#1a1a1a; --grey:#555; --line:#d9dee6; --bg:#f6f7f9; --accent:#e8edf5; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:Calibri, Carlito, "Segoe UI", Arial, sans-serif; color:var(--ink); background:var(--bg); line-height:1.5; }
+  header { background:var(--navy); color:#fff; padding:40px 24px 32px; }
+  .wrap { max-width:960px; margin:0 auto; }
+  header h1 { margin:0; font-size:2.2rem; letter-spacing:.06em; text-transform:uppercase; }
+  header p { margin:6px 0 0; color:#d8e0ec; }
+  header a { color:#fff; }
+  main { padding:28px 24px 48px; }
+  .intro { margin:0 0 24px; color:var(--grey); max-width:720px; }
+  .card { background:#fff; border:1px solid var(--line); border-radius:8px; padding:24px; margin-bottom:24px; }
+  .card h2 { margin:0 0 4px; color:var(--navy); font-size:1.35rem; }
+  .tag { display:inline-block; font-size:.8rem; color:var(--navy); background:var(--accent); border-radius:4px; padding:2px 8px; margin:0 6px 10px 0; }
+  .card p { margin:8px 0; }
+  table { border-collapse:collapse; margin:12px 0; font-size:.95rem; }
+  th, td { text-align:left; padding:5px 14px 5px 0; border-bottom:1px solid var(--line); }
+  th { color:var(--navy); }
+  td.num { text-align:right; }
+  .neg { color:#b00020; font-weight:bold; }
+  .shot { width:100%; border:1px solid var(--line); border-radius:4px; margin:12px 0 4px; }
+  .links { display:flex; flex-wrap:wrap; gap:10px; margin-top:12px; }
+  .btn { display:inline-block; text-decoration:none; color:#fff; background:var(--navy); padding:8px 14px; border-radius:5px; font-size:.95rem; }
+  .btn.alt { background:#fff; color:var(--navy); border:1px solid var(--navy); }
+  .grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+  @media (max-width:720px) { .grid { grid-template-columns:1fr; } header h1 { font-size:1.7rem; } }
+  footer { text-align:center; color:var(--grey); font-size:.85rem; padding:0 24px 32px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>Benjamin Ramirez</h1>
+    <p>Strategic Analyst | Underwriting, Financial Modeling, GIS Analysis | Atlanta, GA</p>
+    <p><a href="https://www.linkedin.com/in/benjamin-ramirez-b15190187">LinkedIn</a></p>
+  </div>
+</header>
+<main class="wrap">
+  <p class="intro">Work samples in underwriting, financial modeling and site analysis. Each model labels its assumptions and includes checks, so the numbers can be traced and tested.</p>
+
+  <section class="card">
+    <h2>Model Review and Audit: 24 Unit Apartment Acquisition</h2>
+    <span class="tag">Underwriting</span><span class="tag">Model audit</span><span class="tag">Excel</span>
+    <p>I reviewed a sample acquisition model for a 24 unit apartment building in Atlanta. As received, it showed a 19.3% levered IRR (internal rate of return). I found and fixed six errors in rent growth, vacancy, the management fee, property tax, equity and selling costs. Each fix is logged by cell with its effect on the IRR, and the review flags Year 1 debt coverage of 1.01x as a likely constraint on loan size.</p>
+    <table>
+      <tr><th>Result</th><th class="num">As received</th><th class="num">Corrected</th></tr>
+      <tr><td>Levered IRR</td><td class="num">19.3%</td><td class="num neg">(2.3%)</td></tr>
+      <tr><td>Equity multiple</td><td class="num">2.32x</td><td class="num">0.89x</td></tr>
+      <tr><td>Year 1 NOI (net operating income)</td><td class="num">$229,744</td><td class="num">$192,801</td></tr>
+      <tr><td>Year 1 debt coverage</td><td class="num">1.20x</td><td class="num">1.01x</td></tr>
+    </table>
+    <img class="shot" src="img/unit24_log.png" alt="Review log listing each error by cell, the fix, and the IRR with only that fix applied">
+    <div class="links">
+      <a class="btn" href="files/Ramirez_Model_Review_Sample.pdf">Review memo and log (PDF)</a>
+      <a class="btn alt" href="files/24_Unit_Model_Corrected.xlsx">Corrected workbook (Excel)</a>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Atlanta Garden Apartments Pro Forma</h2>
+    <span class="tag">Development pro forma</span><span class="tag">Multifamily</span><span class="tag">Excel</span>
+    <p>A sample development pro forma for 120 garden apartments with surface parking in Atlanta, built in Years 1 and 2, leased up in Year 3 and sold at the end of Year 10. Total development cost is $38.9 million and Year 4 NOI is $1.74 million, for a 4.47% yield on cost. To reach a 6.25% target, average monthly rent in Year 4 would need to rise from $2,276 to $2,952.</p>
+    <img class="shot" src="img/garden_summary.png" alt="Summary tab showing returns, sources and uses, permanent loan sizing, sensitivity table and model checks">
+    <div class="links">
+      <a class="btn" href="files/Ramirez_Garden_Apartments_ProForma_Sample.pdf">One page summary (PDF)</a>
+      <a class="btn alt" href="files/Atlanta_Garden_Apartments_ProForma.xlsx">Workbook (Excel)</a>
+    </div>
+  </section>
+
+  <div class="grid">
+    <section class="card">
+      <h2>Jobs and Housing Site Selection Map</h2>
+      <span class="tag">GIS</span><span class="tag">QGIS</span><span class="tag">Site selection</span>
+      <p>An interactive map of jobs versus housing across 3,150 hexagons in Savannah, GA and St. Petersburg, FL, using Census LODES (LEHD Origin Destination Employment Statistics) job data. It finds clusters with Local Moran's I and scores 100 candidate sites.</p>
+      <div class="links"><a class="btn" href="https://benram3737.github.io/site-selection-map/">Open the map</a></div>
+    </section>
+    <section class="card">
+      <h2>Tempe Traffic Crash Dashboard</h2>
+      <span class="tag">R Shiny</span><span class="tag">Data visualization</span>
+      <p>An interactive crash map and dashboard for Tempe, AZ, built in R Shiny.</p>
+      <div class="links"><a class="btn" href="https://benram3737.shinyapps.io/tempe-crash-map/">Open the dashboard</a></div>
+    </section>
+  </div>
+</main>
+<footer>All models are samples built with public data or hypothetical assumptions. No client data is included.</footer>
+</body>
+</html>
